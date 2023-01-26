@@ -1,4 +1,4 @@
-
+import { v4 as uuid } from 'uuid';
 
 export class Todo {
 
@@ -10,7 +10,7 @@ export class Todo {
         
         if(!description) throw new Error('No se ha recibido la descripción')
         
-        this.id = 1;
+        this.id = uuid();
         this.description = description;
         this.done = false;
         this.date = new Date();
